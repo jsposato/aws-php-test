@@ -19,7 +19,19 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <img align="left" src="img/sauron.png" alt="Sauron, the all seeing eye!" height="97" width="90">
+        </div>
+        <div class="col-md-4">
+            <h1 align="center">Sauron</h1>
+        </div>
+        <div class="col-md-4">
+            <img align="right" src="img/sauron.png" alt="Sauron, the all seeing eye!" height="97" width="90">
+        </div>
+    </div>
+    <hr>
     <div class="row col-md-12">
         <?php
 
@@ -46,12 +58,20 @@
             <th># Misses</th>
             <th># Improvements</th>
             <th># Unknown</th>
+            <th># Open Story Points</th>
+            <th># In Progress Story Points</th>
+            <th># QA Review Story Points</th>
+            <th># Showcase Story Points</th>
+            <th># Closed Story Points</th>
            </tr></thead><tbody>\n";
 
         echo $tableStart;
         echo $header;
 
         foreach ($results['Items'] as $key => $value) {
+            if($value['project']['S'] == 'Project') {
+                continue;
+            }
             echo "<tr>";
             echo '<td>' . $value['Project_Id']['S'] . "</td>";
             echo '<td>' . str_replace('"', "", $value['project']['S']) . "</td>";
@@ -61,6 +81,11 @@
             echo '<td>' . $value['Miss_Count']['S'] . "</td>";
             echo '<td>' . $value['Improvement_Count']['S'] . "</td>";
             echo '<td>' . $value['Unknown_Count']['S'] . "</td>";
+            echo '<td>' . $value['Total_Open_Story_Points']['S'] . "</td>";
+            echo '<td>' . $value['Total_In_Progress_Story_Points']['S'] . "</td>";
+            echo '<td>' . $value['Total_QA_Review_Story_Points']['S'] . "</td>";
+            echo '<td>' . $value['Total_Showcase_Story_Points']['S'] . "</td>";
+            echo '<td>' . $value['Total_Closed_Story_Points']['S'] . "</td>";
             echo "</tr>\n";
         }
 
