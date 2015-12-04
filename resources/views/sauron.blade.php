@@ -25,7 +25,8 @@
             <img align="left" src="img/sauron.png" alt="Sauron, the all seeing eye!" height="97" width="90">
         </div>
         <div class="col-md-4">
-            <h1 align="center">Sauron</h1>
+            <h1 align="center">Sauron&copy;	</h1>
+            <p align="center">Sensible JIRA Reporting&trade;</p>
         </div>
         <div class="col-md-4">
             <img align="right" src="img/sauron.png" alt="Sauron, the all seeing eye!" height="97" width="90">
