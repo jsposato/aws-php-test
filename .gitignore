@@ -63,7 +63,7 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -114,5 +114,6 @@ vendor/
 ### Sonar ###
 #Sonar generated dir
 /.sonar/
+/.scannerwork/
 
 # End of https://www.gitignore.io/api/sonar
